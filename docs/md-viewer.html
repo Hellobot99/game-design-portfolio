@@ -73,6 +73,19 @@
       .then(text => {
         document.title = (text.match(/^#\s+(.+)$/m) || [, '문서 보기'])[1];
         mdEl.innerHTML = marked.parse(text);
+        // 문서끼리의 상대 링크(.md)는 뷰어로, 이미지·파일 경로는 문서 위치 기준으로
+        const base = src.includes('/') ? src.slice(0, src.lastIndexOf('/') + 1) : '';
+        mdEl.querySelectorAll('a[href]').forEach(a => {
+          const h = a.getAttribute('href');
+          if (/^(https?:|mailto:|#)/.test(h)) return;
+          const [path, hash] = h.split('#');
+          if (path.endsWith('.md')) a.href = `md-viewer.html?src=${base}${path}${hash ? '#' + hash : ''}`;
+          else a.href = base + h;
+        });
+        mdEl.querySelectorAll('img[src]').forEach(img => {
+          const s = img.getAttribute('src');
+          if (!/^(https?:|data:|\/)/.test(s)) img.src = base + s;
+        });
       })
       .catch(err => {
         mdEl.innerHTML = `<p class="err">문서를 불러오지 못했습니다 (${err.message}).</p>`;
