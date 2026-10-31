@@ -141,6 +141,7 @@
     <a href="docs/portfolio.pdf">포트폴리오 PDF</a>
     <a class="sub" href="#rmd">RaidMyDungeon</a>
     <a class="sub" href="#np">Netrunner's Playlist</a>
+    <a class="sub" href="#maple">스타포스 역기획</a>
     <a class="sub" href="#ai">일하는 방식</a>
   </div>
 
@@ -227,14 +228,32 @@
     </div>
   </div>
 
-  <div class="card wip">
-    <h3>03 · 메이플스토리 스타포스 역기획 <span style="font-size:12px;color:var(--text-dim);font-weight:400">작성 중</span></h3>
-    <div class="meta">상용 라이브 게임 · 강화 시스템 · 개발 전달용 기획서</div>
+  <div class="card wip" id="maple">
+    <h3>03 · 메이플스토리 스타포스 역기획</h3>
+    <div class="meta">상용 라이브 게임 · 강화 시스템 · 개발 전달용 기획서 · 2026.10</div>
+    <div class="summary">
+      메이플스토리 스타포스를 개발자에게 넘기는 기획서처럼 다시 정리했습니다. 규칙과 예외를 표로 쓰고,
+      데이터 테이블을 설계하고, 기대 비용과 불운을 계산한 뒤 개선안을 숫자로 검증했습니다.
+    </div>
     <ul>
-      <li>규칙: 강화 결과 · 결과를 바꾸는 요소 · 예외 처리</li>
-      <li>플로우 차트: 강화 1회 흐름과 분기</li>
-      <li>데이터 테이블 설계, 목표 성까지 기대 비용 분석, 다른 게임 비교와 개선안 (진행 예정)</li>
+      <li><b>규칙 · 플로우:</b> 판정 전에 거를 것(처리 중 · 흔적 · 최대 성 · 메소)과 서버에서 한 번에 처리할 것(차감 · 판정 · 저장)을 나눔</li>
+      <li><b>데이터:</b> 값이 바뀌는 때(기획 · 운영 · 저장)와 키로 테이블 10개를 나누고, 규칙 18개가 전부 표현되는지 대조</li>
+      <li><b>수치 분석:</b> 250제 0 → 22성 평균 194억, 불운 상위 1%는 463억. 비용의 3분의 2가 17 → 20성에 몰림</li>
+      <li><b>비교:</b> 로스트아크(장인의 기운) · 던파(보호권)와 비교해, 스타포스가 불운에 끝을 두지 않는 선택을 했다는 점과 장단점 정리</li>
+      <li><b>개선안:</b> 당긴 만큼 확률과 1회 비용을 함께 올리는 확률 슬라이더. 평균 소각은 그대로, 불운 격차 절반(269억 → 129억), 파괴 1회 아래</li>
     </ul>
+    <div class="label">슬라이드 (눌러서 크게 보기)</div>
+    <div class="slides">
+      <button data-set="maple"><img src="docs/slides/maple-01.jpg" alt="개요" loading="lazy"></button>
+      <button data-set="maple"><img src="docs/slides/maple-02.jpg" alt="규칙과 플로우 차트" loading="lazy"></button>
+      <button data-set="maple"><img src="docs/slides/maple-03.jpg" alt="데이터 테이블 설계" loading="lazy"></button>
+      <button data-set="maple"><img src="docs/slides/maple-04.jpg" alt="수치 분석" loading="lazy"></button>
+      <button data-set="maple"><img src="docs/slides/maple-05.jpg" alt="다른 게임 비교" loading="lazy"></button>
+      <button data-set="maple"><img src="docs/slides/maple-06.jpg" alt="개선안과 전후 검증" loading="lazy"></button>
+    </div>
+    <div class="actions">
+      <a href="docs/md-viewer.html?src=maple/01_역기획서.md">역기획서</a>
+    </div>
   </div>
 
   <h2 class="section" id="ai">일하는 방식</h2>
@@ -245,43 +264,6 @@
       결정 하나를 내리면 프로토타입, 데이터, 기획서를 함께 고치고 결정 기록에 이유를 남깁니다.
     </div>
     <img class="ai-shot" src="docs/slides/ai.jpg" alt="AI 활용 방식" data-set="ai">
-  </div>
-
-  <h2 class="section">그 외</h2>
-
-  <div class="mini">
-    <h4>붕괴: 스타레일 전투 밸런스 역기획 <span class="tag">역기획</span></h4>
-    <p>대미지 공식과 성장 비중을 역산하고, 부옵션 가중치 개선안을 확률로 검증.</p>
-    <a href="docs/md-viewer.html?src=star-rail-reverse-engineering.md">문서 보기</a>
-  </div>
-
-  <div class="mini">
-    <h4>The Last Harbor <span class="tag">개인 · 진행 중</span></h4>
-    <p>대항해시대 무역 시뮬레이션. 데이터 CSV 13종과 페이스 봇으로 진행 속도를 검증.</p>
-  </div>
-
-  <div class="mini">
-    <h4>밸런스 수치 시각화 툴 <span class="tag">웹 도구 · Vanilla JS + Chart.js</span></h4>
-    <p>기준 스탯 → 대미지 공식 → 성장 곡선 → 가치 환율 → 경험치 곡선을 하나로 잇는 도구. 몬테카를로 시뮬레이션 · 가챠 천장 부록.</p>
-    <a href="balance-tool/">도구 열어보기</a>
-  </div>
-
-  <div class="mini">
-    <h4>몬스터 배틀 JRPG <span class="tag">전투 · 성장 설계 연습 · 웹 구현</span></h4>
-    <p>대미지 공식을 세 번 고치고, 탱커 · 물리딜러 · 마법딜러 3종족의 종합 전투력을 Lv1 · Lv30 기준으로 같게 맞춘 연습 프로젝트.</p>
-    <a href="rpg-demo/">플레이 데모</a> &nbsp; <a href="docs/md-viewer.html?src=rpg/system-design.md">시스템 기획서</a>
-  </div>
-
-  <div class="mini">
-    <h4>온라인 경매장 게임 <span class="tag">DB 팀플 · Java/JSP + Oracle</span></h4>
-    <p>경매 등록 · 입찰 · 낙찰 · 수수료 정산 로직을 설계하고, 트랜잭션으로 데이터 무결성을 보장하는 DB를 구축.</p>
-    <a href="https://github.com/Hellobot99/Database_team_project">GitHub</a>
-  </div>
-
-  <div class="mini">
-    <h4>멀티플레이어 좀비 아포칼립스 텍스트 어드벤처 <span class="tag">시스템프로그래밍 팀플 · C/ncurses</span></h4>
-    <p>여러 플레이어가 동시 접속해 스탯을 관리하며, 다수결 투표로 분기형 스토리를 함께 진행하는 협동 게임. 소켓 프로그래밍 기반.</p>
-    <a href="https://github.com/Hellobot99/SP_TeamProject">GitHub</a>
   </div>
 
   <footer>
