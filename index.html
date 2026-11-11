@@ -142,7 +142,7 @@
     <a class="sub" href="#rmd">RaidMyDungeon</a>
     <a class="sub" href="#np">Netrunner's Playlist</a>
     <a class="sub" href="#maple">스타포스 역기획</a>
-    <a class="sub" href="#ai">일하는 방식</a>
+    <a class="sub" href="#ai">AI 활용</a>
   </div>
 
   <ul class="timeline">
@@ -256,15 +256,35 @@
     </div>
   </div>
 
-  <h2 class="section" id="ai">일하는 방식</h2>
-  <div class="card">
+  <div class="card" id="ai" style="border-top:3px solid #0e7c86">
+    <h3>04 · AI 활용</h3>
+    <div class="meta">Claude Code · 프로토타입 · 기획 문서 · 시뮬레이션 · 검증 · 2026.07 ~</div>
     <div class="summary">
-      프로토타입, 시뮬레이터, 시트처럼 반복이 많은 구현은 AI(Claude Code)로 빠르게 만들고,
-      <b>규칙과 수치 결정, 결과가 맞는지 확인하는 일은 직접</b> 했습니다.
-      결정 하나를 내리면 프로토타입, 데이터, 기획서를 함께 고치고 결정 기록에 이유를 남깁니다.
+      규칙과 숫자는 직접 정하고, 코드와 반복 작업은 AI에 맡겼습니다. 결과는 직접 플레이하고 측정해서 판단합니다.
+      2026년 10월에는 혼자 웹게임 네 개를 며칠씩 만에 플레이할 수 있게 만들었습니다.
     </div>
-    <img class="ai-shot" src="docs/slides/ai.jpg" alt="AI 활용 방식" data-set="ai">
-    <img class="ai-shot" src="docs/slides/ai-case.jpg" alt="사례: 확률을 올리는 안을 숫자로 확인하고 버림" data-set="ai" style="margin-top:10px">
+    <ul>
+      <li><b>BattleCoach</b> (하루): 포켓몬 배틀을 하며 턴마다 코치가 수를 평가하는 학습 게임. 퍼즐 100단계를 목표 승률(93% → 30%)에 맞춰 시뮬레이션으로 골라 95단계가 ±5%p 안</li>
+      <li><b>Riddle404</b> (1주): 같은 밤을 일곱 번 재생하며 범인을 찾는 1~6인 협동 추리. 허점이 범인에게만 생기도록 규칙과 난이도 5단계 설계</li>
+      <li><b>토론함뜰래?</b> (이틀): AI가 주제를 내고 심판을 보는 2인 실시간 토론</li>
+      <li><b>The Last Harbor</b> (열흘): 대항해시대 실시간 땅따먹기와 무역. 페이스 봇과 자동 점검으로 숫자 확인</li>
+      <li><b>검증:</b> 봇이 마법사 보호막을 못 살려 103초가 나온 걸 직접 재서 79초로 보정하는 등, AI 결과는 측정으로 확인</li>
+    </ul>
+    <div class="label">슬라이드 (눌러서 크게 보기)</div>
+    <div class="slides">
+      <button data-set="ai"><img src="docs/slides/ai-01.jpg" alt="작업 방식" loading="lazy"></button>
+      <button data-set="ai"><img src="docs/slides/ai-02.jpg" alt="혼자 만든 웹게임 4개" loading="lazy"></button>
+      <button data-set="ai"><img src="docs/slides/ai-03.jpg" alt="BattleCoach 퍼즐 난이도" loading="lazy"></button>
+      <button data-set="ai"><img src="docs/slides/ai-04.jpg" alt="Riddle404 규칙 설계" loading="lazy"></button>
+      <button data-set="ai"><img src="docs/slides/ai-05.jpg" alt="판단 사례" loading="lazy"></button>
+      <button data-set="ai"><img src="docs/slides/ai-06.jpg" alt="검증" loading="lazy"></button>
+    </div>
+    <div class="actions">
+      <a href="https://3.37.102.11.sslip.io">BattleCoach 플레이</a>
+      <a href="https://riddle404.onrender.com/">Riddle404 플레이</a>
+      <a href="https://wannadebate.onrender.com/">토론함뜰래? 플레이</a>
+      <a href="https://claude.ai/artifact/36yjio7pDg7jVgjv8gfXXR">The Last Harbor 프로토타입</a>
+    </div>
   </div>
 
   <footer>
