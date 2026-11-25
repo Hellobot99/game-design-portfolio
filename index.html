@@ -172,6 +172,7 @@
       클라이언트 2명, 모델링과 애니메이션 각 1명이 함께합니다.
     </div>
     <ul>
+      <li><b>기획 의도:</b> 『실전 게임 시스템 기획』 4장 순서(문제 → 역할 → 감정 → 플레이 흐름)로 정리. 공략과 던전 설계를 서로의 재료로 묶고, 의도가 부딪치면 플레이는 막지 않고 보상만 하루 한도를 둠</li>
       <li><b>시스템:</b> 플레이마다 얻는 중심 자원을 하나씩 정하고, 남의 던전을 터는 규칙과 악용을 막는 장치(올리기 전 주인 직접 클리어, 같은 침입자는 하루 한 번만 보상, 서버의 공략 기록 검사)를 설계</li>
       <li><b>기획서:</b> 시스템 기획서 19편을 규칙 · 예외 · 플로우 순서로 써서 개발자가 바로 옮길 수 있게 하고, 화면마다 버튼의 기능과 이동할 곳을 정리</li>
       <li><b>밸런스:</b> 영웅 7명을 직접 플레이하며 클리어 시간을 재고 스킬 보정을 다섯 차례 조정해, 영웅 간 차이를 30초에서 19초로 줄임</li>
@@ -181,15 +182,16 @@
     <div class="label">슬라이드 (눌러서 크게 보기)</div>
     <div class="slides">
       <button data-set="rmd"><img src="docs/slides/rmd-01.jpg" alt="개요" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-02.jpg" alt="플레이별 중심 자원" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-03.jpg" alt="온라인 던전 규칙과 악용 방지" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-04.jpg" alt="시스템 기획서 구성" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-05.jpg" alt="화면 플로우" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-06.jpg" alt="밸런스 작업 단계" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-07.jpg" alt="영웅 7명 클리어 시간 보정" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-08.jpg" alt="성장 몫 나누기" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-09.jpg" alt="골드 경제" loading="lazy"></button>
-      <button data-set="rmd"><img src="docs/slides/rmd-10.jpg" alt="이슈와 결정 기록" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-02.jpg" alt="기획 의도" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-03.jpg" alt="플레이별 중심 자원" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-04.jpg" alt="온라인 던전 규칙과 악용 방지" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-05.jpg" alt="시스템 기획서 구성" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-06.jpg" alt="화면 플로우" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-07.jpg" alt="밸런스 작업 단계" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-08.jpg" alt="영웅 7명 클리어 시간 보정" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-09.jpg" alt="성장 몫 나누기" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-10.jpg" alt="골드 경제" loading="lazy"></button>
+      <button data-set="rmd"><img src="docs/slides/rmd-11.jpg" alt="이슈와 결정 기록" loading="lazy"></button>
     </div>
   </div>
 
@@ -202,6 +204,7 @@
       공식과 수치를 새로 설계해 시뮬레이션으로 확인했습니다.
     </div>
     <ul>
+      <li><b>기획 의도:</b> 작업하며 틀어 두는 게임이라 오프라인 수입과 환생을 중심에 둠. 성장 3축(하드웨어 · 툴 · 악명)의 역할과 감정을 나누고, 1회차는 하드웨어 74%, 10회차는 악명 43%로 의도대로 성장이 나뉘는지 확인</li>
       <li><b>진단:</b> 코드와 데이터를 대조해 51레벨부터 경험치 요구량이 오히려 줄어드는 역전, 보스 HP 톱니 곡선, 지급되지 않는 레벨업 보상 같은 문제를 찾음</li>
       <li><b>시스템:</b> 포맷(환생) 때 지울 것과 남길 것을 나누고, 데이터를 기획 표 · 저장 데이터 · 밸런스 로그로 분리해 ID 대역과 테이블을 설계</li>
       <li><b>공식:</b> 돈(CPS)과 힘(DPS)을 분리하고, 곱으로 키우되 전체 배율 10배 이후엔 로그로 감속. 비용과 보상은 "CPS 몇 분치"로 정의</li>
@@ -212,14 +215,15 @@
     <div class="label">슬라이드 (눌러서 크게 보기)</div>
     <div class="slides">
       <button data-set="np"><img src="docs/slides/np-01.jpg" alt="개요" loading="lazy"></button>
-      <button data-set="np"><img src="docs/slides/np-02.jpg" alt="시스템 구조" loading="lazy"></button>
-      <button data-set="np"><img src="docs/slides/np-03.jpg" alt="포맷 때 지울 것과 남길 것" loading="lazy"></button>
-      <button data-set="np"><img src="docs/slides/np-04.jpg" alt="데이터 설계" loading="lazy"></button>
-      <button data-set="np"><img src="docs/slides/np-05.jpg" alt="공식과 서버 검증" loading="lazy"></button>
-      <button data-set="np"><img src="docs/slides/np-06.jpg" alt="기존 데이터 진단" loading="lazy"></button>
-      <button data-set="np"><img src="docs/slides/np-07.jpg" alt="수치 재설계" loading="lazy"></button>
-      <button data-set="np"><img src="docs/slides/np-08.jpg" alt="시뮬레이션 검증" loading="lazy"></button>
-      <button data-set="np"><img src="docs/slides/np-09.jpg" alt="밸런스 시트" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-02.jpg" alt="기획 의도" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-03.jpg" alt="시스템 구조" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-04.jpg" alt="포맷 때 지울 것과 남길 것" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-05.jpg" alt="데이터 설계" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-06.jpg" alt="공식과 서버 검증" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-07.jpg" alt="기존 데이터 진단" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-08.jpg" alt="수치 재설계" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-09.jpg" alt="시뮬레이션 검증" loading="lazy"></button>
+      <button data-set="np"><img src="docs/slides/np-10.jpg" alt="밸런스 시트" loading="lazy"></button>
     </div>
     <div class="actions">
       <a href="docs/md-viewer.html?src=np/00_개요.md">기획서 개요</a>
